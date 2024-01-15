@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <section>
+        <h1>Placeholder Image path generator</h1>
+        <label for="imageDimensions">Select Image Dimensions:</label>
+        <select id="imageDimensions">
+            <option value="400x300" data-size="small">400x300 pixels (Small)</option>
+            <option value="800x600" data-size="large">800x600 pixels (Large)</option>
+            <option value="1024x768" data-size="large">1024x768 pixels (Large)</option>
+            <option value="1280x720" data-size="large">1280x720 pixels (Large)</option>
+            <option value="1600x1200" data-size="extra-large">1600x1200 pixels (Extra Large)</option>
+            <option value="1920x1080" data-size="extra-large">1920x1080 pixels (Extra Large)</option>
+            <option value="2560x1440" data-size="extra-large">2560x1440 pixels (Extra Large)</option>
+        </select>
+
+        <div class="parent">
+            <label for="nameOnImage">Name On Image</label><input class="style1" type="text" name="" id="nameOnImage">
+        </div>
+        <div class="parent">
+            <label for="backgroundColor">Background Color</label><input value="#f1f1f1" class="style1" type="color"
+                name="" id="backgrondColor">
+        </div>
+        <div class="parent">
+            <label for="TextColor">Text Color</label><input class="style1" type="color" name="" id="TextColor">
+        </div>
+
+        <div class="container">
+            <img src="" alt="">
+            <br>
+            <textarea value="" name="" id="urlPath" cols="20" rows="2">Link Will be available here</textarea>
+        </div>
+    </section>
+    <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+select,
+input[type="text"],
+input[type="color"],
+textarea {
+    width: 100%;
+    /* padding: 10px; */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="text"], textarea {
+    padding: 10px;
+
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+/* Style for the select element */
+#imageDimensions {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+#imageDimensions:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Style for the select options */
+#imageDimensions option {
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Style for the select when it's open (dropdown) */
+#imageDimensions:active,
+#imageDimensions:hover {
+    border-color: #3498db;
+}
+
+
+.container {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Additional styles for input with class "style1" */
+.style1 {
+    border: 1px solid #3498db;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border-radius: 4px;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.style1:focus {
+    border-color: #2980b9;
+    background-color: #dfe6e9;
+    color: #34495e;
+}
+
+.parent {
+    margin-bottom: 15px;
+
+}
+
+/* Styling for the submit button (assuming you have one) */
+input[type="submit"] {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #27ae60;
+}

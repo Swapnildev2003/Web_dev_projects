@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+:root {
+    --bg-main: #464646;
+    --bg--main: #2D2727;
+    --border-color: #efc745;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    height: 100vh;
+    background-color: var(--bg--main);
+}
+
+#card-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    cursor: pointer;
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+}
+
+span {
+    color: var(--border-color);
+}
+
+.match {
+    width: 20rem;
+    height: 20rem;
+
+    /* background-color: var(--border-color); */
+    position: relative;
+    transition: all .2s linear;
+    transform-style: preserve-3d;
+    /* padding: 2rem; */
+}
+
+
+.card-match .front-div {
+    background-color: var(--bg-main);
+}
+
+
+.front-div, .back-div {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+
+    backface-visibility: hidden;
+}
+
+.front-div {
+    background-color: var(--border-color);
+    background-size: contain;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.back-div {
+    transform: rotateY(180deg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.card-selected {
+
+    transform: rotateY(180deg);
+}
+
+#congratulations {
+    display: none;
+    background-color: #2D2727;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+
+#congratulations h2 {
+    font-size: 5em;
+    color: #2D2727;
+    background-color: #efc745;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+#congratulations button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #2D2727;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#congratulations button:hover {
+    background-color: #efc745;
+}
