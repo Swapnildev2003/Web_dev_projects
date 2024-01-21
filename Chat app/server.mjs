@@ -43,8 +43,8 @@ io.on("connection", (socket) => {
 
 // Start the server and listen for incoming requests on port 3000
 const PORT = 3000;
-server.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
+const HOST = "192.168.29.223";
+
+server.listen(PORT, HOST, () => {
+    console.log(`Server is listening on http://${HOST}:${PORT}`);
 });
-
-

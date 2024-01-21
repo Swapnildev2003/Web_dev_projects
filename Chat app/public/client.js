@@ -46,5 +46,5 @@ socket.on('connection', (msg) => {
 })
 
 function scrollToBottom() {
-    message_area.scrollTop = message.scrollHeight
+    message_area.scrollTop = message_area.scrollHeight
 }
