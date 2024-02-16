@@ -18,6 +18,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import { PieChart } from "@mui/x-charts";
+import { Grid } from "@mui/material";
 
 const drawerWidth = 240;
 
@@ -76,6 +78,18 @@ export default function PersistentDrawerLeft() {
 
   const handleDrawerClose = () => {
     setOpen(false);
+  };
+
+  // Generate random data for the pie chart
+  const generateRandomData = () => {
+    const data = [];
+    for (let i = 0; i < 5; i++) {
+      data.push({
+        name: `Category ${i + 1}`,
+        value: Math.floor(Math.random() * 100) + 1, // Random value between 1 and 100
+      });
+    }
+    return data;
   };
 
   return (
@@ -146,37 +160,97 @@ export default function PersistentDrawerLeft() {
           ))}
         </List>
       </Drawer>
-      <Main open={open}>
+      <Main
+        open={open}
+        sx={{ justifyContent: "center", width: "100% !important" }}
+      >
         <DrawerHeader />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-          dolor purus non enim praesent elementum facilisis leo vel. Risus at
-          ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-          quisque non tellus. Convallis convallis tellus id interdum velit
-          laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-          adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-          integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-          eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-          quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-          vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-          lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-          faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-          ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-          elementum integer enim neque volutpat ac tincidunt. Ornare suspendisse
-          sed nisi lacus sed viverra tellus. Purus sit amet volutpat consequat
-          mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis
-          risus sed vulputate odio. Morbi tincidunt ornare massa eget egestas
-          purus viverra accumsan in. In hendrerit gravida rutrum quisque non
-          tellus orci ac. Pellentesque nec nam aliquam sem et tortor. Habitant
-          morbi tristique senectus et. Adipiscing elit duis tristique
-          sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-          eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-          posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            width: "100%",
+            height: "200px",
+            alignItems: "center",
+          }}
+        >
+          <PieChart
+            series={[
+              {
+                data: generateRandomData(),
+                innerRadius: 30,
+                outerRadius: 100,
+                paddingAngle: 5,
+                cornerRadius: 5,
+                startAngle: -90,
+                endAngle: 180,
+                cx: 150,
+                cy: 150,
+              },
+            ]}
+            width={300} // Set the width here
+            height={300} // Set the height here
+          />
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              width: "100%",
+              height: "200px",
+            }}
+          >
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                height: 200,
+                width: "100%",
+                backgroundColor: "lightgray",
+                marginRight: 5, // Add margin for horizontal spacing
+              }}
+            />
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                height: 200,
+                width: "100%",
+                backgroundColor: "lightgray",
+                marginRight: 5, // Add margin for horizontal spacing
+              }}
+            />
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                height: 200,
+                width: "100%",
+                backgroundColor: "lightgray",
+                marginRight: 5, // Add margin for horizontal spacing
+              }}
+            />
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                height: 200,
+                width: "100%",
+                backgroundColor: "lightgray",
+                marginRight: 5, // Add margin for horizontal spacing
+              }}
+            />
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                height: 200,
+                width: "100%",
+                backgroundColor: "lightgray",
+              }}
+            />
+          </div>
+        </div>
       </Main>
     </Box>
   );
