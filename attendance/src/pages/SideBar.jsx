@@ -222,57 +222,52 @@ export default function PersistentDrawerLeft() {
         >
           <BarChart />
           <StackChart />
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)", // Set the number of columns to 2
+              gap: "20px",
+              rowGap: "20px",// Add gap between columns
+              width: "100%",
+              height: "200px",
+            }}
+          >
+            <Grid
+              container
+              spacing={5}
+              sx={{
+                height: 200,
+                backgroundColor: "lightgray",
+              }}
+            />
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                height: 200,
+                backgroundColor: "lightgray",
+              }}
+            />
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                height: 200,
+                backgroundColor: "lightgray",
+              }}
+            />
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                height: 200,
+                backgroundColor: "lightgray",
+              }}
+            />
+
+          </div>
         </div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)", // Set the number of columns to 2
-            gap: "5px", // Add gap between columns
-            width: "100%",
-            height: "200px",
-          }}
-        >
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              height: 200,
-              backgroundColor: "lightgray",
-            }}
-          />
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              height: 200,
-              backgroundColor: "lightgray",
-            }}
-          />
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              height: 200,
-              backgroundColor: "lightgray",
-            }}
-          />
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              height: 200,
-              backgroundColor: "lightgray",
-            }}
-          />
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              height: 200,
-              backgroundColor: "lightgray",
-            }}
-          />
-        </div>
+
 
       </Main>
     </Box>
