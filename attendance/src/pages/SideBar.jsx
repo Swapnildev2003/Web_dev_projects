@@ -20,6 +20,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { PieChart } from "@mui/x-charts";
 import { Grid } from "@mui/material";
+import BarChart from "./PositiveNegativeBarChart";
 
 const drawerWidth = 240;
 
@@ -251,6 +252,7 @@ export default function PersistentDrawerLeft() {
             />
           </div>
         </div>
+        <BarChart />
       </Main>
     </Box>
   );
