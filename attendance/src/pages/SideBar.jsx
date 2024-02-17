@@ -74,6 +74,9 @@ export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
+  const heightGrid = "80px";
+  const widthGrid = "250px";
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -210,65 +213,51 @@ export default function PersistentDrawerLeft() {
           </div>
         </div>
 
-
-
         <div
           style={{
             display: "flex",
             flexDirection: "row",
+            justifyContent: "center",
             width: "100%",
-            height: "250px",
+            height: "300px",
+            margin: "10px",
+            alignItems: "center",
+            overflow: "none",
           }}
         >
-          <BarChart />
-          <StackChart />
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(2, 1fr)", // Set the number of columns to 2
-              gap: "20px",
-              rowGap: "20px",// Add gap between columns
-              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              width: "55%",
               height: "200px",
+              alignItems: "center",
+              marginLeft: "-250px",
+              marginRight: "50px",
             }}
           >
-            <Grid
-              container
-              spacing={5}
-              sx={{
-                height: 200,
-                backgroundColor: "lightgray",
-              }}
-            />
-            <Grid
-              container
-              spacing={2}
-              sx={{
-                height: 200,
-                backgroundColor: "lightgray",
-              }}
-            />
-            <Grid
-              container
-              spacing={2}
-              sx={{
-                height: 200,
-                backgroundColor: "lightgray",
-              }}
-            />
-            <Grid
-              container
-              spacing={2}
-              sx={{
-                height: 200,
-                backgroundColor: "lightgray",
-              }}
-            />
-
+            <BarChart style={{ height: "200", width: "300" }} />
+            <StackChart style={{ height: "200", width: "300" }} />
+          </div>
+          <div
+            style={{
+              padding: "23px 0px 23px",
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 0.5fr)",
+              columnGap: "20px",
+              rowGap: "20px",
+              width: "25%",
+              height: "200px",
+              placeItems: "center",
+            }}
+          >
+            <Grid heightGrid={heightGrid} widthGrid={widthGrid} />
+            <Grid heightGrid={heightGrid} widthGrid={widthGrid} />
+            <Grid heightGrid={heightGrid} widthGrid={widthGrid} />
+            <Grid heightGrid={heightGrid} widthGrid={widthGrid} />
           </div>
         </div>
-
-
       </Main>
     </Box>
   );
