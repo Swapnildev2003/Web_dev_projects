@@ -18,10 +18,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
-import { PieChart } from "@mui/x-charts";
-import Grid from "./Grid";
-import BarChart from "./PositiveNegativeBarChart";
-import StackChart from "./StackedBarChart";
+import ReactScheduler from "./ReactScheduler";
 
 const drawerWidth = 240;
 
@@ -74,27 +71,12 @@ export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
-  const heightGrid = "80px";
-  const widthGrid = "250px";
-
   const handleDrawerOpen = () => {
     setOpen(true);
   };
 
   const handleDrawerClose = () => {
     setOpen(false);
-  };
-
-  // Generate random data for the pie chart
-  const generateRandomData = () => {
-    const data = [];
-    for (let i = 0; i < 5; i++) {
-      data.push({
-        name: `Category ${i + 1}`,
-        value: Math.floor(Math.random() * 100) + 1, // Random value between 1 and 100
-      });
-    }
-    return data;
   };
 
   return (
@@ -112,7 +94,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Student Profile
+            Teacher Profile
           </Typography>
         </Toolbar>
       </AppBar>
@@ -165,99 +147,9 @@ export default function PersistentDrawerLeft() {
           ))}
         </List>
       </Drawer>
-      <Main
-        open={open}
-        sx={{ justifyContent: "center", width: "100% !important" }}
-      >
+      <Main open={open}>
         <DrawerHeader />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            width: "100%",
-            height: "200px",
-            alignItems: "center",
-          }}
-        >
-          <PieChart
-            series={[
-              {
-                data: generateRandomData(),
-                innerRadius: 30,
-                outerRadius: 100,
-                paddingAngle: 5,
-                cornerRadius: 5,
-                startAngle: -90,
-                endAngle: 180,
-                cx: 150,
-                cy: 150,
-              },
-            ]}
-            width={300} // Set the width here
-            height={300} // Set the height here
-          />
-
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: "100%",
-              height: "200px",
-            }}
-          >
-            <Grid />
-            <Grid />
-            <Grid />
-            <Grid />
-            <Grid />
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            width: "100%",
-            height: "300px",
-            margin: "10px",
-            alignItems: "center",
-            overflow: "none",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              width: "55%",
-              height: "200px",
-              alignItems: "center",
-              marginLeft: "-250px",
-              marginRight: "50px",
-            }}
-          >
-            <BarChart style={{ height: "200", width: "300" }} />
-            <StackChart style={{ height: "200", width: "300" }} />
-          </div>
-          <div
-            style={{
-              padding: "23px 0px 23px",
-              display: "grid",
-              gridTemplateColumns: "repeat(2, 0.5fr)",
-              columnGap: "20px",
-              rowGap: "20px",
-              width: "25%",
-              height: "200px",
-              placeItems: "center",
-            }}
-          >
-            <Grid heightGrid={heightGrid} widthGrid={widthGrid} />
-            <Grid heightGrid={heightGrid} widthGrid={widthGrid} />
-            <Grid heightGrid={heightGrid} widthGrid={widthGrid} />
-            <Grid heightGrid={heightGrid} widthGrid={widthGrid} />
-          </div>
-        </div>
+        <ReactScheduler />
       </Main>
     </Box>
   );

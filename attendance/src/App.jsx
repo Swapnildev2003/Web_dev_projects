@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./App.css";
-import SideBar from "./pages/student/SideBar";
+import TeacherSideBar from "./pages/teacher/SideBar";
+import StudentSideBar from "./pages/teacher/SideBar";
 
 function App() {
   return (
     <>
       <div>
-        <SideBar />
+        <TeacherSideBar />
       </div>
     </>
   );
