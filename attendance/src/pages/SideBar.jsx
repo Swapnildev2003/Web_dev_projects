@@ -214,7 +214,7 @@ export default function PersistentDrawerLeft() {
             display: "flex",
             flexDirection: "row",
             width: "100%",
-            height: "200px",
+            height: "250px",
           }}
         >
           <BarChart />
