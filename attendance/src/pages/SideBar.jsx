@@ -21,6 +21,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import { PieChart } from "@mui/x-charts";
 import { Grid } from "@mui/material";
 import BarChart from "./PositiveNegativeBarChart";
+import StackChart from "./StackedBarChart"
 
 const drawerWidth = 240;
 
@@ -253,6 +254,7 @@ export default function PersistentDrawerLeft() {
           </div>
         </div>
         <BarChart />
+        <StackChart />
       </Main>
     </Box>
   );
