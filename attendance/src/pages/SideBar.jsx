@@ -19,9 +19,9 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { PieChart } from "@mui/x-charts";
-import { Grid } from "@mui/material";
+import Grid from "./Grid";
 import BarChart from "./PositiveNegativeBarChart";
-import StackChart from "./StackedBarChart"
+import StackChart from "./StackedBarChart";
 
 const drawerWidth = 240;
 
@@ -202,61 +202,27 @@ export default function PersistentDrawerLeft() {
               height: "200px",
             }}
           >
-            <Grid
-              container
-              spacing={2}
-              sx={{
-                height: 200,
-                width: "100%",
-                backgroundColor: "lightgray",
-                marginRight: 5, // Add margin for horizontal spacing
-              }}
-            />
-            <Grid
-              container
-              spacing={2}
-              sx={{
-                height: 200,
-                width: "100%",
-                backgroundColor: "lightgray",
-                marginRight: 5, // Add margin for horizontal spacing
-              }}
-            />
-            <Grid
-              container
-              spacing={2}
-              sx={{
-                height: 200,
-                width: "100%",
-                backgroundColor: "lightgray",
-                marginRight: 5, // Add margin for horizontal spacing
-              }}
-            />
-            <Grid
-              container
-              spacing={2}
-              sx={{
-                height: 200,
-                width: "100%",
-                backgroundColor: "lightgray",
-                marginRight: 5, // Add margin for horizontal spacing
-              }}
-            />
-            <Grid
-              container
-              spacing={2}
-              sx={{
-                height: 200,
-                width: "100%",
-                backgroundColor: "lightgray",
-              }}
-            />
+            <Grid />
+            <Grid />
+            <Grid />
+            <Grid />
+            <Grid />
           </div>
         </div>
-        <BarChart />
-        <StackChart />
 
 
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            width: "100%",
+            height: "250px",
+          }}
+        >
+          <BarChart />
+          <StackChart />
+        </div>
       </Main>
     </Box>
   );
