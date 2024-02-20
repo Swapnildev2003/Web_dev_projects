@@ -154,7 +154,7 @@ export default function PersistentDrawerLeft() {
       <Main open={open}>
         <DrawerHeader />
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <Attendence drop={course} name={"course"} />
+          <Attendence drop={course} name="course" />
           <Attendence drop={branch} name="branch" />
           <Attendence drop={year} name="year" />
         </div>
