@@ -18,7 +18,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
-import ReactScheduler from "./ReactScheduler";
+import Attendence from "./Attendence";
 
 const drawerWidth = 240;
 
@@ -70,6 +70,10 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+
+  const course = ["None", "BTech", "Bca", "BPharma", "Mca", "MTech"];
+  const branch = ["None", "CSE", "IT", "Civil", "Chemical", "Bca"];
+  const year = ["None", "First", "Second", "Third", "Forth"];
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -149,7 +153,11 @@ export default function PersistentDrawerLeft() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <ReactScheduler />
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <Attendence drop={course} name={"course"} />
+          <Attendence drop={branch} name="branch" />
+          <Attendence drop={year} name="year" />
+        </div>
       </Main>
     </Box>
   );
